@@ -31,6 +31,10 @@ P07,24,male,right,en,1,Hand,Dynamic Hands + Static Icosphere,1,Hand-mapping firs
 P07,24,male,right,en,1,Hand,Dynamic Hands + Static Icosphere,1,Hand-mapping first,HC_HE,high,high,B02,2,true,6,6,6,54,32,0,0,6,0,0,5,5,6
 P07,24,male,right,en,1,Hand,Dynamic Hands + Static Icosphere,1,Hand-mapping first,HC_LE,high,low,B03,3,true,7,7,7,44,42,0,0,2,1,0,0,5,6
 P07,24,male,right,en,1,Hand,Dynamic Hands + Static Icosphere,1,Hand-mapping first,LC_LE,low,low,B04,4,true,7,7,7,39,17,0,16,2,3,2,0,6,6
+P07,24,male,right,en,2,Env,Static Hands + Dynamic Icosphere,2,Hand-mapping first,HC_HE,high,high,B01,1,true,7,7,7,38,43,0,0,0,1,0,0,6,5
+P07,24,male,right,en,2,Env,Static Hands + Dynamic Icosphere,2,Hand-mapping first,LC_LE,low,low,B02,2,true,7,7,7,65,36,0,0,0,1,0,0,6,5
+P07,24,male,right,en,2,Env,Static Hands + Dynamic Icosphere,2,Hand-mapping first,LC_HE,low,high,B03,3,true,7,7,7,43,38,0,0,0,0,1,0,6,6
+P07,24,male,right,en,2,Env,Static Hands + Dynamic Icosphere,2,Hand-mapping first,HC_LE,high,low,B04,4,true,7,7,7,43,41,0,0,1,0,0,0,6,6
 P09,26,female,right,en,1,Env,Static Hands + Dynamic Icosphere,1,Env-mapping first,LC_HE,low,high,B01,1,true,9,2,7,95,-61,0,0,79,0,15,6,6,7
 P09,26,female,right,en,1,Env,Static Hands + Dynamic Icosphere,1,Env-mapping first,HC_LE,high,low,B02,2,true,8,1,8,86,-73,0,0,10,82,0,5,6,7
 P09,26,female,right,en,1,Env,Static Hands + Dynamic Icosphere,1,Env-mapping first,HC_HE,high,high,B03,3,true,4,6,9,-43,46,5,0,0,2,50,90,5,6
