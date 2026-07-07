@@ -8,6 +8,7 @@ It is intentionally separate from the working `study-6` repository. The working 
 
 - `data/participant-datasets-by-catalog/`
   - De-identified participant folders.
+  - `all-ecg-csv/`, a flat duplicate copy of every ECG CSV.
   - `master_participant_psychometrics.csv`.
   - De-identified `participant_data_collection_catalog.xlsx`.
 All orchestration and sync scripts live in the working `study-6` repository, not here.
@@ -21,7 +22,8 @@ The current package was mirrored from:
 Expected current snapshot:
 
 - Participant folders: `P02`, `P03`, `P04`, `P05`, `P07`, `P09`, `P11`, `P14`, `P23`, `P24`
-- ECG CSV files: `60`
+- Participant-folder ECG CSV files: `60`
+- Flat `all-ecg-csv/` ECG CSV files: `60`
 - Master psychometrics rows: `60`
 - Participant catalog rows: `24`
 
@@ -39,13 +41,12 @@ That command mirrors the clean data package into this repository, validates the 
 
 Recommended setup:
 
-1. Keep this GitHub repository private while the study is still active.
-2. In OSF, open the project for this study.
-3. Add the GitHub add-on/integration.
-4. Connect this repository: `GeorgeFejer91/emotion-vr-data`.
-5. Point collaborators to the `data/participant-datasets-by-catalog` folder as the upload-ready dataset.
+1. In OSF, open the project for this study.
+2. Add the GitHub add-on/integration.
+3. Connect this repository: `GeorgeFejer91/emotion-vr-data`.
+4. Point collaborators to the `data/participant-datasets-by-catalog` folder as the upload-ready dataset.
 
-After the GitHub add-on is connected, future OSF-facing updates happen by running `.\scripts\publish_data_repo.ps1` and pushing the refreshed data to GitHub.
+After the GitHub add-on is connected, future OSF-facing updates happen from the working `study-6` repository by running `tmp\participant-catalog-xlsx\publish_osf_data_repo.ps1` and pushing the refreshed data to GitHub.
 
 ## Privacy Boundary
 
