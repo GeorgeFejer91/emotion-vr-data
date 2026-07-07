@@ -2,7 +2,7 @@
 
 This repository mirrors the de-identified, OSF-ready data package for the eMotion VR study.
 
-It is intentionally separate from the working `study-6` repository. The working repository can contain raw headset exports, orchestration files, intermediate inventories, private lookup files, and development scripts. This repository should contain only the final upload-facing data package plus the small scripts needed to refresh and publish it.
+It is intentionally separate from the working `study-6` repository. The working repository can contain raw headset exports, orchestration files, intermediate inventories, private lookup files, and development scripts. This repository should contain only the final upload-facing data package and minimal dataset-facing documentation.
 
 ## Repository Contents
 
@@ -10,12 +10,7 @@ It is intentionally separate from the working `study-6` repository. The working 
   - De-identified participant folders.
   - `master_participant_psychometrics.csv`.
   - De-identified `participant_data_collection_catalog.xlsx`.
-- `scripts/sync_from_study6.ps1`
-  - Mirrors the clean OSF-facing package from the working `study-6` repository.
-- `scripts/publish_data_repo.ps1`
-  - Runs the mirror step, commits changes, and pushes this data repository to GitHub.
-- `for-ai/DATA_REPO_SYNC_PROTOCOL.md`
-  - Guardrails for future AI-assisted data syncs.
+All orchestration and sync scripts live in the working `study-6` repository, not here.
 
 ## Current Data Snapshot
 
@@ -32,13 +27,13 @@ Expected current snapshot:
 
 ## Standard Update Flow
 
-From this repository:
+From the working `study-6` repository:
 
 ```powershell
-.\scripts\publish_data_repo.ps1
+tmp\participant-catalog-xlsx\publish_osf_data_repo.ps1
 ```
 
-That command mirrors the clean data package from the working study repository, validates the mirrored files, commits any changes, and pushes to GitHub.
+That command mirrors the clean data package into this repository, validates the mirrored files, commits any changes, and pushes to GitHub.
 
 ## OSF Sync
 
@@ -63,5 +58,6 @@ This repository should not contain:
 - Per-session questionnaire source JSON/CSV files.
 - Intermediate inventory files.
 - Working scripts from the study repository.
+- AI/orchestration instructions.
 
 License and public reuse terms should be confirmed before making the OSF project or this repository public.
