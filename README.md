@@ -21,8 +21,8 @@ The current package was mirrored from:
 Expected current snapshot:
 
 - Participant folders: `P02`, `P03`, `P04`, `P05`, `P07`, `P09`, `P11`, `P14`, `P23`, `P24`
-- ECG CSV files: `56`
-- Master psychometrics rows: `56`
+- ECG CSV files: `60`
+- Master psychometrics rows: `60`
 - Participant catalog rows: `24`
 
 ## Standard Update Flow
