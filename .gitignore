@@ -11,6 +11,7 @@ _private/
 *.bak
 *.tmp
 *.copy-warning.*
+~$*.xlsx
 
 **/*name_lookup*
 **/*private*

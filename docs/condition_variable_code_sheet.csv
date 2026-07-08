@@ -1,0 +1,40 @@
+Section,Code or variable,Values or range,Meaning,File or location,Notes
+Participant identifier,Participant Number,P01-P24 public participant code,De-identified participant code used across public data files,data/participant-datasets-by-catalog/master_participant_psychometrics.csv,Participant names are not included in public files.
+Participant descriptor,Age,Years,Participant age in years,data/participant-datasets-by-catalog/master_participant_psychometrics.csv,
+Participant descriptor,Gender,Free-text category from demographics,Participant-reported gender,data/participant-datasets-by-catalog/master_participant_psychometrics.csv,
+Participant descriptor,Handedness,left/right/other or blank,Participant-reported handedness,data/participant-datasets-by-catalog/master_participant_psychometrics.csv,
+Participant descriptor,Language,Language code or blank,Questionnaire language code when present,data/participant-datasets-by-catalog/master_participant_psychometrics.csv,
+Session order,Order,1 or 2,Condition collection order within participant,data/participant-datasets-by-catalog/master_participant_psychometrics.csv,1 means first collected mapping; 2 means second collected mapping.
+Mapping,Mapping (Hand/Env),Hand,Dynamic Hands + Static Icosphere APK mapping,data/participant-datasets-by-catalog/master_participant_psychometrics.csv,ECG filenames use the same Hand token.
+Mapping,Mapping (Hand/Env),Env,Static Hands + Dynamic Icosphere APK mapping,data/participant-datasets-by-catalog/master_participant_psychometrics.csv,ECG filenames use the same Env token.
+Condition label,Condition Label,Dynamic Hands + Static Icosphere,Full label for Hand mapping,data/participant-datasets-by-catalog/master_participant_psychometrics.csv,
+Condition label,Condition Label,Static Hands + Dynamic Icosphere,Full label for Env mapping,data/participant-datasets-by-catalog/master_participant_psychometrics.csv,
+Session order,Condition Position,1 or 2,Row-level condition order for the current mapping,data/participant-datasets-by-catalog/master_participant_psychometrics.csv,
+Session order,Condition Sequence,Hand-mapping first or Env-mapping first,Participant-level counterbalancing label repeated on each row,data/participant-datasets-by-catalog/master_participant_psychometrics.csv,
+Experimental condition,Experimental Condition,HC_HE,High coherence and high energy block condition,data/participant-datasets-by-catalog/master_participant_psychometrics.csv,
+Experimental condition,Experimental Condition,HC_LE,High coherence and low energy block condition,data/participant-datasets-by-catalog/master_participant_psychometrics.csv,
+Experimental condition,Experimental Condition,LC_HE,Low coherence and high energy block condition,data/participant-datasets-by-catalog/master_participant_psychometrics.csv,
+Experimental condition,Experimental Condition,LC_LE,Low coherence and low energy block condition,data/participant-datasets-by-catalog/master_participant_psychometrics.csv,
+Experimental condition,Coherence Level,high_coherence or low_coherence,Expanded coherence factor label,data/participant-datasets-by-catalog/master_participant_psychometrics.csv,
+Experimental condition,Energy Level,high_energy or low_energy,Expanded energy/noise factor label,data/participant-datasets-by-catalog/master_participant_psychometrics.csv,
+Block,Block ID,B01-B04,Within-session block identifier,data/participant-datasets-by-catalog/master_participant_psychometrics.csv,
+Block,Block Order,1-4,Within-session block presentation order,data/participant-datasets-by-catalog/master_participant_psychometrics.csv,
+Questionnaire status,Questionnaire Complete,true/false,Whether the block-level questionnaire was completed,data/participant-datasets-by-catalog/master_participant_psychometrics.csv,
+Questionnaire,SAM Valence (1-9),1-9,Self-Assessment Manikin valence rating,data/participant-datasets-by-catalog/master_participant_psychometrics.csv,Higher values indicate more positive valence.
+Questionnaire,SAM Arousal (1-9),1-9,Self-Assessment Manikin arousal rating,data/participant-datasets-by-catalog/master_participant_psychometrics.csv,Higher values indicate higher arousal.
+Questionnaire,SAM Dominance (1-9),1-9,Self-Assessment Manikin dominance/control rating,data/participant-datasets-by-catalog/master_participant_psychometrics.csv,Higher values indicate higher dominance/control.
+Questionnaire,Affect VAS Valence (-100 to 100),-100 to 100,Continuous valence visual analog scale,data/participant-datasets-by-catalog/master_participant_psychometrics.csv,
+Questionnaire,Affect VAS Arousal (-100 to 100),-100 to 100,Continuous arousal visual analog scale,data/participant-datasets-by-catalog/master_participant_psychometrics.csv,
+Questionnaire,Disgust VAS (0-100),0-100,Disgust intensity visual analog scale,data/participant-datasets-by-catalog/master_participant_psychometrics.csv,
+Questionnaire,Surprise VAS (0-100),0-100,Surprise intensity visual analog scale,data/participant-datasets-by-catalog/master_participant_psychometrics.csv,
+Questionnaire,Happiness VAS (0-100),0-100,Happiness intensity visual analog scale,data/participant-datasets-by-catalog/master_participant_psychometrics.csv,
+Questionnaire,Sadness VAS (0-100),0-100,Sadness intensity visual analog scale,data/participant-datasets-by-catalog/master_participant_psychometrics.csv,
+Questionnaire,Anger VAS (0-100),0-100,Anger intensity visual analog scale,data/participant-datasets-by-catalog/master_participant_psychometrics.csv,
+Questionnaire,Fear VAS (0-100),0-100,Fear intensity visual analog scale,data/participant-datasets-by-catalog/master_participant_psychometrics.csv,
+Questionnaire,Hand Embodiment Ownership (1-7),1-7,Hand embodiment ownership item,data/participant-datasets-by-catalog/master_participant_psychometrics.csv,Applicable to the study questionnaire schema.
+Questionnaire,Hand Embodiment Agency (1-7),1-7,Hand embodiment agency item,data/participant-datasets-by-catalog/master_participant_psychometrics.csv,Applicable to the study questionnaire schema.
+ECG filename,ECG_OverallOrder_P##_Mapping_ExperimentalCondition_Coherence_Energy_BlockID.csv,Example ECG_05_P02_Env_HC_HE_high_coherence_high_energy_B01.csv,Public ECG filename convention,data/participant-datasets-by-catalog/P## and data/participant-datasets-by-catalog/all-ecg-csv,OverallOrder 01-08 sorts files by collection order across both sessions.
+ECG folder,P##,Participant-specific ECG CSV folder,data/participant-datasets-by-catalog/P##,Contains ECG CSV files only.
+ECG folder,all-ecg-csv,Flat duplicate ECG CSV folder,data/participant-datasets-by-catalog/all-ecg-csv,Contains one duplicate of every participant-folder ECG CSV.
+Catalog workbook,participant_data_collection_catalog.xlsx,Workbook,De-identified participant overview workbook,data/participant-datasets-by-catalog/participant_data_collection_catalog.xlsx,Contains no Name column.
+Questionnaire render,study6_vr_questionnaire_materials.pdf,PDF,Rendered questionnaire block materials and notes,docs/study6_vr_questionnaire_materials.pdf,

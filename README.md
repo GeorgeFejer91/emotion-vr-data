@@ -10,8 +10,20 @@ It is intentionally separate from the working `study-6` repository. The working 
   - De-identified participant folders.
   - `all-ecg-csv/`, a flat duplicate copy of every ECG CSV.
   - `master_participant_psychometrics.csv`.
-  - De-identified `participant_data_collection_catalog.xlsx`.
-All orchestration and sync scripts live in the working `study-6` repository, not here.
+  - De-identified, color-coded `participant_data_collection_catalog.xlsx`.
+- `docs/`
+  - `condition_variable_code_sheet.csv`.
+  - `study6_vr_questionnaire_materials.pdf`.
+- `Import Data/`
+  - Standalone headset-to-repository import protocol.
+  - Pulls Study 6 app-private headset data through `hzdb`.
+  - Writes only de-identified `P##` public outputs and rejects participant names.
+  - Refreshes the public color-coded participant overview workbook.
+
+Most orchestration and development scripts still live in the working `study-6`
+repository. The `Import Data/` folder is the portable exception that lets an
+agent sync headset data into this standalone data repository from any lab
+computer.
 
 ## Current Data Snapshot
 
@@ -22,12 +34,29 @@ The current package was mirrored from:
 Expected current snapshot:
 
 - Participant folders: `P01`, `P02`, `P03`, `P04`, `P05`, `P07`, `P09`, `P11`, `P14`, `P23`, `P24`
-- Participant-folder ECG CSV files: `68`
-- Flat `all-ecg-csv/` ECG CSV files: `68`
-- Master psychometrics rows: `68`
+- Participant-folder ECG CSV files: `76`
+- Flat `all-ecg-csv/` ECG CSV files: `76`
+- Master psychometrics rows: `76`
 - Participant catalog rows: `24`
+- Documentation files: `docs/condition_variable_code_sheet.csv`, `docs/study6_vr_questionnaire_materials.pdf`
 
 ## Standard Update Flow
+
+For direct headset import from this standalone repository:
+
+```powershell
+.\Import Data\Sync-Study6HeadsetData.ps1 -Serial <QUEST_SERIAL>
+```
+
+For a safe preview against an already pulled headset folder:
+
+```powershell
+.\Import Data\Sync-Study6HeadsetData.ps1 -SourcePullDir "C:\path\to\headset-pull" -DryRun
+```
+
+The importer stores raw headset pulls and receipts under gitignored `private/`
+and never commits demographics JSON or participant names. It also refreshes the
+color-coded participant overview workbook without a participant-name column.
 
 From the working `study-6` repository:
 
